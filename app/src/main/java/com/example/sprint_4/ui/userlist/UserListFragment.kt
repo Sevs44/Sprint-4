@@ -17,7 +17,7 @@ class UserListFragment : Fragment() {
 
     private lateinit var binding: FragmentUserListBinding
 
-    private val userListViewModel: UserListViewModel by viewModels()
+    private val viewModel: UserListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,7 +39,7 @@ class UserListFragment : Fragment() {
         binding.rvUserList.layoutManager = LinearLayoutManager(context)
         binding.rvUserList.adapter = adapter
 
-        userListViewModel.allUsers.observe(viewLifecycleOwner, Observer { users ->
+        viewModel.allUsers.observe(viewLifecycleOwner, Observer { users ->
             users?.let { adapter.submitList(it) }
         })
 
