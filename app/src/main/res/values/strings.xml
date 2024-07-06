@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Sprint-4</string>
-    <string name="add_user_button">Añade usuario</string>
+    <string name="save_user_button">Guardar usuario</string>
+    <string name="name">Nombre: </string>
+    <string name="favorite_color">"Color favorito: "</string>
+    <string name="birthdate">"Fecha de nacimiento: "</string>
+    <string name="favorite_city">"Ciudad favorita: "</string>
+    <string name="favorite_number">"Número favorito: "</string>
+    <string name="actual_location">"Localización actual: "</string>
+    <string name="user_name_example">John</string>
+    <string name="user_fav_color_example">Azul</string>
+    <string name="user_birthdate_example">01/01/2000</string>
+    <string name="user_fav_city_name_example">Nueva York</string>
+    <string name="user_favorite_number_example">84</string>
+    <string name="open_map">Abrir mapa</string>
+    <string name="user_actual_position_example">40.730610, -73.935242</string>
+    <string name="back_button_description">Back button</string>
 </resources>
