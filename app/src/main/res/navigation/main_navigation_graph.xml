@@ -3,11 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/mainActivity">
+    app:startDestination="@id/fragment_user_list">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.sprint_4.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/fragment_user_list"
+        android:name="com.example.sprint_4.ui.userlist.UserListFragment"
+        android:label="UserList"
+        tools:layout="@layout/fragment_user_list">
+
+        <argument
+            android:name="id"
+            app:argType="Int" />
+        <action
+            android:id="@+id/action_fragment_user_list_to_fragment_user_details"
+            app:destination="@id/fragment_user_details"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_fragment_user_list_to_fragment_add_user2"
+            app:destination="@id/fragment_add_user"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_add_user"
+        android:name="com.example.sprint_4.ui.adduser.AddUserFragment"
+        android:label="AddUser"
+        tools:layout="@layout/fragment_add_user">
+
+        <action
+            android:id="@+id/action_fragment_add_user_to_fragment_user_list"
+            app:destination="@id/fragment_user_list"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_user_details"
+        android:name="com.example.sprint_4.ui.userdetails.UserDetailsFragment"
+        android:label="UserDetails"
+        tools:layout="@layout/fragment_user_details">
+        <argument
+            android:name="location"
+            app:argType="String" />
+        <action
+            android:id="@+id/action_fragment_user_details_to_fragment_user_map"
+            app:destination="@id/fragment_user_map"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_user_map"
+        android:name="com.example.sprint_4.ui.map.UserMapFragment"
+        android:label="UserMap"
+        tools:layout="@layout/fragment_user_map">
+
+    </fragment>
+
 </navigation>
