@@ -11,9 +11,6 @@
         android:label="UserList"
         tools:layout="@layout/fragment_user_list">
 
-        <argument
-            android:name="id"
-            app:argType="Int" />
         <action
             android:id="@+id/action_fragment_user_list_to_fragment_user_details"
             app:destination="@id/fragment_user_details"
@@ -51,8 +48,8 @@
         android:label="UserDetails"
         tools:layout="@layout/fragment_user_details">
         <argument
-            android:name="location"
-            app:argType="String" />
+            android:name="id"
+            app:argType="Int" />
         <action
             android:id="@+id/action_fragment_user_details_to_fragment_user_map"
             app:destination="@id/fragment_user_map"
@@ -67,6 +64,9 @@
         android:name="com.example.sprint_4.ui.map.UserMapFragment"
         android:label="UserMap"
         tools:layout="@layout/fragment_user_map">
+        <argument
+            android:name="location"
+            app:argType="TODO" />
 
     </fragment>
 

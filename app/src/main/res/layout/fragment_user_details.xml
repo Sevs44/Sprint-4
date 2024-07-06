@@ -111,7 +111,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/etFavNumber"
+        android:id="@+id/tvUserFavNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -128,7 +128,7 @@
         android:text="@string/actual_location"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/etFavNumber"
+        app:layout_constraintTop_toBottomOf="@id/tvUserFavNumber"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

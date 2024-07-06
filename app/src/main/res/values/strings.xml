@@ -9,7 +9,7 @@
     <string name="actual_location">"Localización actual: "</string>
     <string name="user_name_example">John</string>
     <string name="user_fav_color_example">Azul</string>
-    <string name="user_birthdate_example">01/01/2000</string>
+    <string name="user_birthdate_example">DD/MM/YYYY</string>
     <string name="user_fav_city_name_example">Nueva York</string>
     <string name="user_favorite_number_example">84</string>
     <string name="open_map">Abrir mapa</string>
