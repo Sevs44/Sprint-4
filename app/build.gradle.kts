@@ -76,6 +76,9 @@ dependencies {
     //Lifecycle
     implementation(libs.bundles.lifecycle)
 
+    // Maps SDK for Android
+    implementation(libs.google.play.services.maps)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

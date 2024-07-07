@@ -1,9 +1,9 @@
 package com.example.sprint_4.data
 
-import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.android.gms.maps.model.LatLng
 
 @Entity(tableName = "users")
 data class UserEntity(
@@ -11,12 +11,8 @@ data class UserEntity(
     val name: String,
     val favoriteColor: String,
     val birthdate: String,
-    @Embedded(prefix = "fav_") val favoriteCity: Location,
+    @Embedded(prefix = "fav_") val favoriteCityCoordinates: LatLng,
+    val favoriteCityName: String,
     val favoriteNumber: Int,
-    @Embedded(prefix = "actual_") val actualPosition: Location
-)
-
-data class Location(
-    @ColumnInfo(name = "latitude") val latitude: Double,
-    @ColumnInfo(name = "longitude") val longitude: Double
+    @Embedded(prefix = "actual_") val actualPosition: LatLng
 )
