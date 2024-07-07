@@ -5,3 +5,8 @@ plugins {
     alias(libs.plugins.navigationSafeArgs) apply false
     id("com.google.dagger.hilt.android") version "2.44" apply false
 }
+buildscript {
+    dependencies {
+        classpath(libs.secrets.gradle.plugin)
+    }
+}

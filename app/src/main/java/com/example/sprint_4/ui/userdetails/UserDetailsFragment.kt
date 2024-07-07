@@ -35,7 +35,7 @@ class UserDetailsFragment : Fragment() {
             user?.let {
                 binding.tvUserName.text = it.name
                 binding.tvUserFavColor.text = it.favoriteColor
-                binding.tvUserBirthdate.text = it.birthdate.toString()
+                binding.tvUserBirthdate.text = it.birthdate
                 binding.tvFavNumber.text = it.favoriteNumber.toString()
                 binding.tvActualLocationValue.text = it.actualPosition.toString()
                 //binding.tvUserFavCity.text = it.favoriteCity.toString()
